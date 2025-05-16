@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -154,12 +155,12 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright et liens légaux */}
         <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-300">
           <p>© {currentYear} Chauffe-O-Express. Tous droits réservés.</p>
           <p className="mt-2">
-            <a href="#" className="hover:text-blue-light">Mentions légales</a> | 
-            <a href="#" className="hover:text-blue-light ml-2">Politique de confidentialité</a>
+            <Link to="/mentions-legales" className="hover:text-blue-light">Mentions légales</Link> | 
+            <Link to="/politique-confidentialite" className="hover:text-blue-light ml-2">Politique de confidentialité</Link>
           </p>
         </div>
       </div>

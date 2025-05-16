@@ -7,6 +7,7 @@ import Gallery from "@/components/home/Gallery";
 import Testimonials from "@/components/home/Testimonials";
 import ContactForm from "@/components/home/ContactForm";
 import CTABanner from "@/components/home/CTABanner";
+import CookieConsent from "@/components/legal/CookieConsent";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <ContactForm />
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };

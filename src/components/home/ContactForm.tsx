@@ -1,10 +1,11 @@
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ const ContactForm = () => {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -29,10 +31,18 @@ const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulation d'envoi de formulaire
-    setTimeout(() => {
+    // Envoi réel du formulaire via EmailJS
+    // Vous devez créer un compte sur EmailJS (https://www.emailjs.com/) et configurer un service et un modèle
+    emailjs.sendForm(
+      'service_default', // Remplacez par votre Service ID
+      'template_default', // Remplacez par votre Template ID
+      formRef.current as HTMLFormElement,
+      'your_public_key' // Remplacez par votre Public Key
+    )
+    .then((result) => {
       setIsLoading(false);
       toast.success("Votre demande a bien été envoyée ! Nous vous contacterons dans les plus brefs délais.");
+      console.log('Email envoyé avec succès:', result.text);
       setFormData({
         name: "",
         phone: "",
@@ -40,7 +50,12 @@ const ContactForm = () => {
         service: "",
         message: "",
       });
-    }, 1500);
+    })
+    .catch((error) => {
+      setIsLoading(false);
+      toast.error("Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer.");
+      console.error('Erreur lors de l\'envoi de l\'email:', error.text);
+    });
   };
 
   return (
@@ -146,7 +161,7 @@ const ContactForm = () => {
           {/* Formulaire de contact */}
           <div className="bg-gray-light rounded-lg p-8">
             <h3 className="text-2xl font-bold text-blue-dark mb-6">Demande de devis gratuit</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="name">Nom complet *</Label>
                 <Input 

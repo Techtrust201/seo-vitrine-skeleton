@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -10,11 +9,12 @@ const Hero = () => {
   };
 
   return (
-    <section 
-      id="accueil" 
-      className="relative min-h-screen flex items-center pt-16"
+    <section
+      id="accueil"
+      className="relative min-h-screen flex items-center pt-16 bg-black lg:bg-[url('/public/hero-banner.png')]"
       style={{
-        backgroundImage: "linear-gradient(to right, rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.7)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625')",
+        // backgroundImage:
+        //   "url('/public/ChatGPT Image 16 mai 2025, 20_43_31.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -25,18 +25,22 @@ const Hero = () => {
             Votre expert en plomberie et chauffe-eau
           </h1>
           <p className="text-gray-100 text-xl md:text-2xl mb-8 animate-fade-in">
-            Plus de 20 ans d'expérience à votre service pour tous vos besoins en plomberie, 
-            installation de chauffe-eau et conversion de baignoire en douche.
+            Plus de 20 ans d'expérience à votre service pour tous vos besoins en
+            plomberie, installation de chauffe-eau et conversion de baignoire en
+            douche.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button 
+          <div
+            className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <Button
               onClick={scrollToContact}
               className="bg-blue-light hover:bg-blue-medium text-white font-bold px-8 py-6 text-lg"
             >
               Demander un devis gratuit
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               onClick={() => {
                 const servicesSection = document.getElementById("services");
                 if (servicesSection) {
@@ -48,26 +52,68 @@ const Hero = () => {
               Découvrir nos services
             </Button>
           </div>
-          
+
           {/* Badges de confiance */}
-          <div className="mt-12 flex flex-wrap gap-6 items-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <div
+            className="mt-12 flex flex-wrap gap-6 items-center animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
             <div className="bg-white/90 px-4 py-2 rounded-full flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-dark mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-blue-dark mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
-              <span className="text-blue-dark font-semibold">Devis gratuit</span>
+              <span className="text-blue-dark font-semibold">
+                Devis gratuit
+              </span>
             </div>
             <div className="bg-white/90 px-4 py-2 rounded-full flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-dark mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-blue-dark mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
-              <span className="text-blue-dark font-semibold">Intervention rapide</span>
+              <span className="text-blue-dark font-semibold">
+                Intervention rapide
+              </span>
             </div>
             <div className="bg-white/90 px-4 py-2 rounded-full flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-dark mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-blue-dark mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
-              <span className="text-blue-dark font-semibold">Garantie satisfaction</span>
+              <span className="text-blue-dark font-semibold">
+                Garantie satisfaction
+              </span>
             </div>
           </div>
         </div>

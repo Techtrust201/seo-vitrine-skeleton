@@ -106,7 +106,7 @@ const ContactForm = () => {
                     href="tel:06XXXXXXXX"
                     className="text-gray-600 hover:text-blue-light"
                   >
-                    06 XX XX XX XX
+                    06 69 79 21 95
                   </a>
                 </div>
               </div>

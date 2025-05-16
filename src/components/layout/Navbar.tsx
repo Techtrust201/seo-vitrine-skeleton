@@ -36,14 +36,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-heading font-bold text-blue-dark">
+          {/* <span className="text-2xl font-heading font-bold text-blue-dark">
             Chauffe-<span className="text-blue-light">O</span>-Express
-          </span>
-          {/* <img
-            src={"/public/logo_3_cropped.png"}
+          </span> */}
+          <img
+            src={"/public/logo_1_cropped_transparent.png"}
             alt={"logo chauffe-eau-express"}
             className="w-24 h-full object-cover transition-transform duration-300 hover:scale-105"
-          /> */}
+          />
         </a>
 
         {/* Navigation pour desktop */}

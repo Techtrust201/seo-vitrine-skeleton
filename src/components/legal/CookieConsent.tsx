@@ -31,7 +31,7 @@ const CookieConsent = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex-1">
             <p className="text-sm">
-              Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies.
+              CHAUFFE O EXPRESS utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies.
               Pour en savoir plus, consultez notre{" "}
               <a href="/politique-confidentialite" className="text-blue-light underline">
                 politique de confidentialité

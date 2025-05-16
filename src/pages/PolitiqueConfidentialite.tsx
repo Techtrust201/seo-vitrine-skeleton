@@ -19,9 +19,10 @@ const PolitiqueConfidentialite = () => {
                 Date de dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
               </p>
               <p className="mb-4">
-                Chauffe-O-Express s'engage à protéger la vie privée des utilisateurs de son site internet.
-                Cette politique de confidentialité vous informe sur la manière dont nous recueillons,
-                utilisons et protégeons vos données personnelles.
+                CHAUFFE O EXPRESS, SARL au capital de 10 000€, immatriculée au RCS sous le numéro SIREN 939 758 835, 
+                dont le siège social est situé au 107 CHEMIN DU PLAN 1, 83550 VIDAUBAN, s'engage à protéger la vie privée des 
+                utilisateurs de son site internet. Cette politique de confidentialité vous informe sur la manière 
+                dont nous recueillons, utilisons et protégeons vos données personnelles.
               </p>
             </section>
             
@@ -92,6 +93,19 @@ const PolitiqueConfidentialite = () => {
                 Nous conservons vos données personnelles aussi longtemps que nécessaire pour 
                 atteindre les finalités pour lesquelles elles ont été collectées, sauf si une période
                 de conservation plus longue est requise ou permise par la loi.
+              </p>
+            </section>
+            
+            <section className="mb-8">
+              <h2 className="text-2xl font-heading font-semibold text-blue-dark mb-4">
+                Responsable du traitement
+              </h2>
+              <p>
+                Le responsable du traitement des données personnelles est :<br />
+                CHAUFFE O EXPRESS<br />
+                107 CHEMIN DU PLAN 1<br />
+                83550 VIDAUBAN<br />
+                Email : contact@chauffe-o-express.fr
               </p>
             </section>
             

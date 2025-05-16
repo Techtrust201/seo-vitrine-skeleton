@@ -158,10 +158,20 @@ const Footer = () => {
         {/* Copyright et liens légaux */}
         <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-300">
           <p>© {currentYear} Chauffe-O-Express. Tous droits réservés.</p>
-          <p className="mt-2">
-            <Link to="/mentions-legales" className="hover:text-blue-light">Mentions légales</Link> | 
-            <Link to="/politique-confidentialite" className="hover:text-blue-light ml-2">Politique de confidentialité</Link>
-          </p>
+          <div className="mt-2 flex flex-col md:flex-row justify-center gap-2 md:gap-4">
+            <Link to="/mentions-legales" className="hover:text-blue-light">Mentions légales</Link>
+            <span className="hidden md:inline">|</span>
+            <Link to="/politique-confidentialite" className="hover:text-blue-light">Politique de confidentialité</Link>
+            <span className="hidden md:inline">|</span>
+            <a 
+              href="https://www.tech-trust.fr/fr" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-300 cursor-pointer"
+            >
+              Réalisation Tech-Trust
+            </a>
+          </div>
         </div>
       </div>
     </footer>

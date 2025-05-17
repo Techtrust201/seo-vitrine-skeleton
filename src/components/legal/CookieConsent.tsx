@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -31,25 +30,29 @@ const CookieConsent = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex-1">
             <p className="text-sm">
-              CHAUFFE O EXPRESS utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies.
-              Pour en savoir plus, consultez notre{" "}
-              <a href="/politique-confidentialite" className="text-blue-light underline">
+              CHAUFFE O EXPRESS utilise des cookies pour améliorer votre
+              expérience. En continuant à naviguer, vous acceptez notre
+              utilisation des cookies. Pour en savoir plus, consultez notre{" "}
+              <a
+                href="/politique-confidentialite"
+                className="text-blue-light underline"
+              >
                 politique de confidentialité
               </a>
               .
             </p>
           </div>
           <div className="flex gap-3">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               onClick={declineCookies}
-              className="text-white border-white hover:bg-blue-medium"
+              className="bg-blue-light text-white border-white hover:bg-blue-medium"
             >
               Refuser
             </Button>
-            <Button 
+            <Button
               onClick={acceptCookies}
-              className="bg-blue-light hover:bg-blue-medium"
+              className="bg-blue-medium hover:bg-blue-medium"
             >
               Accepter
             </Button>

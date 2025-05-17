@@ -72,14 +72,14 @@ const Navbar = () => {
           >
             Réalisations
           </button>
-          <button
+          {/* <button
             onClick={() => scrollToSection("temoignages")}
             className={`${
               isScrolled ? "text-blue-dark" : "text-white"
             } hover:text-blue-light font-medium transition-colors`}
           >
             Témoignages
-          </button>
+          </button> */}
           <Button
             onClick={() => scrollToSection("contact")}
             className="bg-blue-light hover:bg-blue-medium text-white"

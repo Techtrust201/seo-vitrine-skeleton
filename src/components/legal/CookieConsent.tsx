@@ -46,13 +46,13 @@ const CookieConsent = () => {
             <Button
               variant="outline"
               onClick={declineCookies}
-              className="bg-blue-light text-white border-white hover:bg-blue-medium"
+              className="bg-blue-mediumtext-white border-white hover:bg-blue-medium"
             >
               Refuser
             </Button>
             <Button
               onClick={acceptCookies}
-              className="bg-blue-medium hover:bg-blue-medium"
+              className="bg-blue-light hover:bg-blue-medium"
             >
               Accepter
             </Button>

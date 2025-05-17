@@ -197,9 +197,7 @@ const ContactForm = () => {
                   <h3 className="text-lg font-semibold text-blue-dark">
                     Zone d'intervention
                   </h3>
-                  <p className="text-gray-600">
-                    Marseille et ses environs (30km)
-                  </p>
+                  <p className="text-gray-600">Fréjus et ses environs (50km)</p>
                 </div>
               </div>
             </div>
@@ -365,7 +363,7 @@ const ContactForm = () => {
         <div className="mt-16">
           <div className="bg-gray-100 rounded-lg overflow-hidden h-96">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92451.95429285602!2d5.349702424822192!3d43.29693645641737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9bf4344da5333%3A0x40819a5fd970220!2sMarseille!5e0!3m2!1sfr!2sfr!4v1683553420914!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92686.91150587838!2d6.708745888017167!3d43.45086786700848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce983498604e77%3A0x40819a5fd8fccf0!2zRnLDqWp1cw!5e0!3m2!1sfr!2sfr!4v1747440162507!5m2!1sfr!2sfr"
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -19,7 +19,7 @@ const Services = () => {
           {/* Chauffe-eau */}
           <div
             id="chauffe-eau"
-            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
           >
             <div className="h-48 bg-gradient-to-r from-blue-dark to-blue-medium flex items-center justify-center text-white">
               <svg
@@ -37,7 +37,7 @@ const Services = () => {
                 />
               </svg>
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold text-blue-dark mb-2">
                 Installation de chauffe-eau
               </h3>
@@ -120,7 +120,7 @@ const Services = () => {
                 </li>
               </ul>
               <Button
-                className="w-full bg-blue-dark hover:bg-blue-medium text-white"
+                className="w-full bg-blue-dark hover:bg-blue-medium text-white mt-auto"
                 onClick={() => {
                   const contactSection = document.getElementById("contact");
                   if (contactSection) {
@@ -136,7 +136,7 @@ const Services = () => {
           {/* Plomberie */}
           <div
             id="plomberie"
-            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
           >
             <div className="h-48 bg-gradient-to-r from-blue-dark to-blue-medium flex items-center justify-center text-white">
               <svg
@@ -154,9 +154,9 @@ const Services = () => {
                 />
               </svg>
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold text-blue-dark mb-2">
-                Plomberie sanitaire
+                Service plomberie sanitaire
               </h3>
               <p className="text-gray-600 mb-4">
                 {/* Tous travaux de plomberie et sanitaire : installation, réparation, remplacement 
@@ -235,7 +235,7 @@ const Services = () => {
                 </li>
               </ul>
               <Button
-                className="w-full bg-blue-dark hover:bg-blue-medium text-white"
+                className="w-full bg-blue-dark hover:bg-blue-medium text-white mt-auto"
                 onClick={() => {
                   const contactSection = document.getElementById("contact");
                   if (contactSection) {
@@ -251,7 +251,7 @@ const Services = () => {
           {/* Conversion baignoire-douche */}
           <div
             id="conversion"
-            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
           >
             <div className="h-48 bg-gradient-to-r from-blue-dark to-blue-medium flex items-center justify-center text-white">
               <svg
@@ -269,14 +269,13 @@ const Services = () => {
                 />
               </svg>
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold text-blue-dark mb-2">
-                Conversion baignoire en douche
+                Conversion baignoire / douche
               </h3>
               <p className="text-gray-600 mb-4">
-                Transformez votre baignoire en douche pour plus de confort et de
-                sécurité. Nos solutions sont adaptées à tous les espaces et
-                budgets.
+                Remplacez votre baignoire par une douche, pour plus de confort
+                et sécurité. Solutions adaptées à tous les espaces et budgets.
               </p>
               <ul className="mb-6 space-y-2 text-gray-600">
                 <li className="flex items-center">
@@ -349,7 +348,7 @@ const Services = () => {
                 </li>
               </ul>
               <Button
-                className="w-full bg-blue-dark hover:bg-blue-medium text-white"
+                className="w-full bg-blue-dark hover:bg-blue-medium text-white mt-auto"
                 onClick={() => {
                   const contactSection = document.getElementById("contact");
                   if (contactSection) {

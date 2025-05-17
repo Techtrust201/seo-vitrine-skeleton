@@ -50,25 +50,33 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-6">
           <button
             onClick={() => scrollToSection("accueil")}
-            className="text-blue-dark hover:text-blue-light font-medium transition-colors"
+            className={`${
+              isScrolled ? "text-blue-dark" : "text-white"
+            } hover:text-blue-light font-medium transition-colors`}
           >
             Accueil
           </button>
           <button
             onClick={() => scrollToSection("services")}
-            className="text-blue-dark hover:text-blue-light font-medium transition-colors"
+            className={`${
+              isScrolled ? "text-blue-dark" : "text-white"
+            } hover:text-blue-light font-medium transition-colors`}
           >
             Services
           </button>
           <button
             onClick={() => scrollToSection("galerie")}
-            className="text-blue-dark hover:text-blue-light font-medium transition-colors"
+            className={`${
+              isScrolled ? "text-blue-dark" : "text-white"
+            } hover:text-blue-light font-medium transition-colors`}
           >
             Réalisations
           </button>
           <button
             onClick={() => scrollToSection("temoignages")}
-            className="text-blue-dark hover:text-blue-light font-medium transition-colors"
+            className={`${
+              isScrolled ? "text-blue-dark" : "text-white"
+            } hover:text-blue-light font-medium transition-colors`}
           >
             Témoignages
           </button>

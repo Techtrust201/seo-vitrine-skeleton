@@ -47,14 +47,14 @@ const Footer = () => {
                   Réalisations
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#temoignages"
                   className="hover:text-blue-light transition-colors"
                 >
                   Témoignages clients
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#contact"

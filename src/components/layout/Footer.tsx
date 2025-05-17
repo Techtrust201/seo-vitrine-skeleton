@@ -91,7 +91,7 @@ const Footer = () => {
                   href="#conversion"
                   className="hover:text-blue-light transition-colors"
                 >
-                  Conversion baignoire en douche
+                  Conversion de baignoire en douche
                 </a>
               </li>
             </ul>

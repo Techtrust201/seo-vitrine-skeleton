@@ -47,7 +47,7 @@ import { useState, useEffect } from "react";
 //     name: "Élise P.",
 //     location: "La Ciotat",
 //     rating: 5,
-//     text: "Transformation complète de notre salle de bain avec conversion baignoire en douche adaptée PMR pour ma mère. Des conseils pertinents et un travail de qualité. Merci !",
+//     text: "Transformation complète de notre salle de bain avec conversion de baignoire en douche adaptée PMR pour ma mère. Des conseils pertinents et un travail de qualité. Merci !",
 //     date: "22/03/2025",
 //   },
 // ];

@@ -40,7 +40,7 @@ const Navbar = () => {
             Chauffe-<span className="text-blue-light">O</span>-Express
           </span> */}
           <img
-            src={"/public/logo_1_cropped_transparent.png"}
+            src={"/logo_1_cropped_transparent.png"}
             alt={"logo chauffe-eau-express"}
             className="w-24 h-full object-cover transition-transform duration-300 hover:scale-105"
           />

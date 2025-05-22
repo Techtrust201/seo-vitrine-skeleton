@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 // ---- IMAGES -------------------------------------------------------------
-import beforeBathroom from "../../../public/realisation/ChatGPT Image 16 mai 2025, 16_25_26.png";
-import afterBathroom from "../../../public/realisation/ChatGPT Image 16 mai 2025, 16_28_12.png";
-import beforeCompleteRenovation from "../../../public/realisation/ChatGPT Image 16 mai 2025, 16_45_32.png";
-import afterCompleteRenovation from "../../../public/realisation/ChatGPT Image 16 mai 2025, 16_45_31.png";
-import beforeOldWaterHeater from "../../../public/realisation/ChatGPT Image 16 mai 2025, 16_37_23.png";
-import afterOldWaterHeater from "../../../public/realisation/ChatGPT Image 16 mai 2025, 16_37_26.png";
+import beforeBathroom from "../../assets/ChatGPTImage16mai2025,16_25_26.png";
+import afterBathroom from "../../assets/ChatGPTImage16mai2025,16_28_12.png";
+import beforeCompleteRenovation from "../../assets/ChatGPTImage16mai2025,16_45_32.png";
+import afterCompleteRenovation from "../../assets/ChatGPTImage16mai2025,16_45_31.png";
+import beforeOldWaterHeater from "../../assets/ChatGPTImage16mai2025,16_37_23.png";
+import afterOldWaterHeater from "../../assets/ChatGPTImage16mai2025,16_15_41.png";
 // ------------------------------------------------------------------------
 
 type Category = "all" | "chauffe-eau" | "plomberie" | "conversion";

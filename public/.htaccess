@@ -1,0 +1,9 @@
+# .htaccess  (à placer dans le dossier racine du site)
+RewriteEngine On
+
+# Si le fichier ou le dossier demandé N'existe PAS
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# …alors renvoyer tout vers /index.html
+RewriteRule ^ index.html [QSA,L]

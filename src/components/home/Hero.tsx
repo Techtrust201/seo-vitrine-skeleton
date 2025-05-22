@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen flex items-center pt-16 bg-black lg:bg-[url('/public/hero-banner.png')]"
+      className="relative min-h-screen flex items-center pt-16 bg-[#285E8F] lg:bg-[url('/public/hero-banner.png')]"
       style={{
         // backgroundImage:
         //   "url('/public/ChatGPT Image 16 mai 2025, 20_43_31.png')",

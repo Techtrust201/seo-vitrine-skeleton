@@ -1,5 +1,5 @@
 # .github/workflows/deploy.yml
-name: Deploy to OVH (npm)
+name: Deploy to OVH (FTP)
 
 on:
   push:
@@ -12,23 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4 # installe Node
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20" # adapte si besoin
-          cache: "npm" # mise en cache du dossier ~/.npm
+          node-version: "20"
+          cache: "npm"
 
-      - run: npm ci # installe depuis package-lock.json
-      - run: npm run build # crée le dossier dist/
+      - run: npm ci # reproduit package-lock.json :contentReference[oaicite:3]{index=3}
+      - run: npm run build # ➜ dist/
 
-      - name: Upload via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 # ne gère que ftp / ftps :contentReference[oaicite:4]{index=4}
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ftp.cluster021.hosting.ovh.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp # 🔑
           port: 21
-          local-dir: ./dist/ # <— bien finir par /
-          server-dir: ./ # ou ./www/ selon ton multisite
-          log-level: standard
-          dangerous-clean-slate: true # vide le dossier avant upload (optionnel)
+          local-dir: ./dist/ # slash final obligatoire
+          server-dir: ./www/ # dossier racine défini dans Multisite
+          dangerous-clean-slate: true

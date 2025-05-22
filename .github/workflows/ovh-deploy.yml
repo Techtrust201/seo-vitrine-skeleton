@@ -2,35 +2,32 @@ name: Deploy to OVH
 
 on:
   push:
-    branches: [main] # déclenche à chaque push sur main
+    branches: [main]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check-out repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 22 # la version que tu utilises
+          node-version: 22
 
-      - name: Install PNPM
-        uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v3
         with:
           version: 8
 
-      - run: pnpm install # ou npm ci
-      - run: pnpm run build # produit dist/
+      - run: pnpm install
+      - run: pnpm run build # crée dist/
 
-      - name: Upload via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+      - name: Upload to OVH via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist # ce qu’on envoie
-          server-dir: /www # dossier racine OVH
-          protocol: ftp # explicite : pas de TLS
+          server: ${{ secrets.FTP_SERVER }} # ex. ftp.cluster021.hosting.ovh.net
+          username: ${{ secrets.FTP_USERNAME }} # chauffcn
+          password: ${{ secrets.FTP_PASSWORD }} # Passe4015
+          protocol: ftp
+          local-dir: dist
+          server-dir: /www # ou ton dossier racine exact

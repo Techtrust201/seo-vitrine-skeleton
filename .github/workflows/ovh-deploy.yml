@@ -1,4 +1,6 @@
-name: Deploy to OVH
+# .github/workflows/deploy.yml
+name: Deploy to OVH (npm)
+
 on:
   push:
     branches: [main]
@@ -10,23 +12,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4 # installe Node
         with:
-          node-version: 22
+          node-version: "20" # adapte si besoin
+          cache: "npm" # mise en cache du dossier ~/.npm
 
-      - uses: pnpm/action-setup@v3
+      - run: npm ci # installe depuis package-lock.json
+      - run: npm run build # crée le dossier dist/
+
+      - name: Upload via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          version: 8 # ← ta version PNPM
-
-      - run: pnpm install
-      - run: pnpm run build # génère dist/
-
-      - name: Upload to OVH via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 # tag existant
-        with:
-          server: ${{ secrets.FTP_SERVER }} # ftp.cluster021.hosting.ovh.net
-          username: ${{ secrets.FTP_USERNAME }} # chauffcn
-          password: ${{ secrets.FTP_PASSWORD }} # Passe4015
-          protocol: ftp
-          local-dir: dist/ # ← slash final OBLIGATOIRE
-          server-dir: /www/ # ← ajoute le slash final
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./dist/ # <— bien finir par /
+          server-dir: ./ # ou ./www/ selon ton multisite
+          log-level: standard
+          dangerous-clean-slate: true # vide le dossier avant upload (optionnel)

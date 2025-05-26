@@ -230,14 +230,35 @@ const Footer = () => {
               Politique de confidentialité
             </Link>
             <span className="hidden md:inline">|</span>
-            <a
+            {/* <a
               href="https://www.tech-trust.fr/fr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 cursor-pointer"
             >
               Réalisation Tech-Trust
-            </a>
+            </a> */}
+            <p className=" text-gray-300 text-sm">
+              Site réalisé par{" "}
+              <a
+                href="https://www.tech-trust.fr/fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-light"
+              >
+                Tech-Trust
+              </a>{" "}
+              by{" "}
+              <a
+                href="https://www.arodata.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-light"
+              >
+                Arodata
+              </a>
+              .
+            </p>
           </div>
         </div>
       </div>

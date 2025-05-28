@@ -24,10 +24,15 @@ const Hero = () => {
           <h1 className="text-white mb-4 animate-slide-up">
             Votre expert en plomberie et chauffe-eau
           </h1>
-          <p className="text-gray-100 text-xl md:text-2xl mb-8 animate-fade-in">
+          <p className="text-gray-100 text-xl md:text-2xl mb-6 animate-fade-in">
             Plus de 20 ans d'expérience à votre service pour tous vos besoins en
             plomberie, installation de chauffe-eau et conversion de baignoire en
             douche.
+          </p>
+          <p className="text-gray-200 text-lg mb-8 animate-fade-in">
+            Installation, dépannage 7j/7, maintenance de chauffe-eau et
+            solutions sur-mesure pour votre confort. Intervention rapide dans
+            tout le Var.
           </p>
           <div
             className="flex flex-col sm:flex-row gap-4 animate-fade-in"

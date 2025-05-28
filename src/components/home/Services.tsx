@@ -6,11 +6,14 @@ const Services = () => {
       <div className="container mx-auto">
         {/* En-tête de section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-blue-dark mb-4">Nos services</h2>
+          <h2 className="text-3xl font-bold text-blue-dark mb-4">
+            Nos Services de Plomberie à Vidauban
+          </h2>
           <p className="text-lg text-gray-600">
             Nous proposons une gamme complète de services de plomberie et
             sanitaire pour répondre à tous vos besoins, avec une qualité de
-            travail irréprochable et un service client de premier ordre.
+            travail irréprochable et un service client de premier ordre. Notre
+            équipe d'experts qualifiés intervient rapidement dans tout le Var.
           </p>
         </div>
 

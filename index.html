@@ -62,9 +62,72 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Chauffe-O-Express",
+        "image": "https://chauffe-o-express.fr/logo_1_cropped_transparent.png",
+        "description": "Service professionnel de plomberie, installation de chauffe-eau et conversion de baignoire en douche. Plus de 20 ans d'expérience dans le secteur.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "107 CHEMIN DU PLAN 1",
+          "addressLocality": "VIDAUBAN",
+          "postalCode": "83550",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "43.4276",
+          "longitude": "6.4340"
+        },
+        "url": "https://chauffe-o-express.fr",
+        "telephone": "+33494999999",
+        "sameAs": [
+          "https://www.facebook.com/chauffeoexpress",
+          "https://www.instagram.com/chauffeoexpress"
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "priceRange": "€€",
+        "servesCuisine": "Plomberie"
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-K9XW385L");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K9XW385L"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>

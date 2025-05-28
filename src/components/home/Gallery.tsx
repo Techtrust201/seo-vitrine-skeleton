@@ -145,7 +145,7 @@ const Gallery = () => {
 
         {/* ---------- MODAL ---------- */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-          <DialogContent className="max-w-4xl p-0 md:max-h-[90vh] w-[90vw] max-w-[90vw] overflow-hidden">
+          <DialogContent className="max-w-4xl p-0 md:max-h-[90vh] w-[90vw] overflow-hidden">
             {/* Conteneur scrollable pour empêcher le body‑lock de bloquer l’affichage sur mobile */}
             <div className="max-h-[90vh] overflow-y-auto">
               {selectedItem && (
